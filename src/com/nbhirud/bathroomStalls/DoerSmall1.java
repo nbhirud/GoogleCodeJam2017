@@ -5,7 +5,6 @@
  */
 package com.nbhirud.bathroomStalls;
 
-import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.TreeSet;
 
@@ -13,16 +12,15 @@ import java.util.TreeSet;
  *
  * @author nbhirud
  */
-public class Doer {
+public class DoerSmall1 {
 
     //TreeSet<Integer> t;
-    PriorityQueue<Long> t;
-    long pplCount;
+    PriorityQueue<Integer> t;
+    int pplCount;
 
-    public Doer(Long n, long p) {
+    public DoerSmall1(int n, int p) {
         //t = new TreeSet<>();
-        //t = new PriorityQueue<>((long x,long y) ->  (y-x));
-        t = new PriorityQueue<>(Collections.reverseOrder());
+        t = new PriorityQueue<>((x,y) -> y-x);
         t.add(n);
         pplCount = p;
 
@@ -30,13 +28,13 @@ public class Doer {
 
     public String processor() {
 
-        long ls = 0, rs = 0;
+        int ls = 0, rs = 0;
         //System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
-        for (long i = pplCount; i > 0; i--) {
+        for (int i = pplCount; i > 0; i--) {
 
             //int largest = t.last(); //largest in tree set
-            long largest = t.poll();
+            int largest = t.poll();
             //t.remove(largest);
             if (largest == 0) {
                 //System.out.println("####################################3"+largest+" "+i+" "+pplCount);

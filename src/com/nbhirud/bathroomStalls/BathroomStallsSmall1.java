@@ -23,7 +23,7 @@ import java.util.logging.Logger;
  *
  * @author nbhirud
  */
-public class BathroomStalls {
+public class BathroomStallsSmall1 {
 
     /**
      * @param args the command line arguments
@@ -48,8 +48,8 @@ public class BathroomStalls {
                 i++;
                 //System.out.println(line);
                 String[] input = line.split(" ");
-                String str = new Doer(Long.parseLong(input[0]), Long.parseLong(input[1])).processor();
-                //System.out.println(str);
+                String str = new DoerSmall1(Integer.parseInt(input[0]), Integer.parseInt(input[1])).processor();
+                System.out.println(str);
                 op = op + "Case #"+ i +": "+ str + "\n";
             }
 
@@ -84,9 +84,9 @@ Case #5: 500 499
             //bw.close();
 
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(BathroomStalls.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BathroomStallsSmall1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(BathroomStalls.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BathroomStallsSmall1.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         /*
